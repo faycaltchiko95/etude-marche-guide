@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide d'Étude de Marché Simplifiée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+      .step-indicator {
+        transition: all 0.3s ease;
+      }
+      .step-indicator.active {
+        background-color: #6366f1;
+        color: white;
+        transform: scale(1.1);
+      }
+      .step-indicator.completed {
+        background-color: #10b981;
+        color: white;
+      }
+      .example-card {
+        transition: all 0.3s ease;
+      }
+      .example-card:hover {
+        transform: translateY(-5px);
+      }
+      @media (max-width: 640px) {
+        .step-nav {
+          flex-direction: column;
+        }
+        .step-indicator {
+          margin-bottom: 8px;
+        }
+      }
+
+      /* Animation pour les transitions d'étapes */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <!-- En-tête -->
+      <header class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">
+          <i class="fas fa-chart-line mr-2"></i>Guide d'Étude de Marché
+          Simplifiée
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Apprenez pas à pas comment réaliser une étude de marché complète pour
+          déterminer si votre produit a du potentiel.
+        </p>
+      </header>
+
+      <!-- Conteneur principal -->
+      <div
+        class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+      >
+        <!-- Barre de progression -->
+        <div class="p-6 bg-gray-50 border-b">
+          <div class="flex justify-between items-center step-nav">
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-1"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-indigo-600 text-white font-bold cursor-pointer active"
+              >
+                1
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-2"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                2
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-3"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                3
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-4"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                4
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-5"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                5
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-6"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                6
+              </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div
+                id="step-7"
+                class="step-indicator w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold cursor-pointer"
+              >
+                7
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenu des étapes -->
+        <div class="p-6 md:p-8">
+          <!-- Étape 1: Définir votre produit -->
+          <div id="step-1-content" class="step-content active animate-fade-in">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Étape 1:
+              Définir votre produit
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                La première étape consiste à bien définir ton produit, comme
+                quand tu expliques ton jouet préféré à un ami. Tu dois pouvoir
+                expliquer clairement:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>Ce que fait ton produit (à quoi il sert)</li>
+                <li>
+                  Pourquoi quelqu'un voudrait l'acheter (quel problème il
+                  résout)
+                </li>
+                <li>
+                  Ce qui le rend spécial par rapport aux autres produits
+                  similaires
+                </li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">
+                  Imagine que ton produit est une brosse à dents pour enfants
+                  avec une minuterie sonore:
+                </p>
+                <ul class="mt-2 space-y-1 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Ce qu'elle fait:</span> Elle
+                    nettoie les dents et emet des sons d'oiseaux pendant 2
+                    minutes
+                  </li>
+                  <li>
+                    <span class="font-semibold">Problème résolu:</span> Les
+                    enfants ne brossent pas leurs dents assez longtemps
+                  </li>
+                  <li>
+                    <span class="font-semibold">Ce qui la rend spéciale:</span>
+                    Elle rend le brossage amusant avec les chats d'oiseaux
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Prends une feuille de papier et décris ton produit avec ces
+                  trois points:
+                </p>
+                <ol class="list-decimal pl-6 text-gray-600">
+                  <li>Ce que fait ton produit</li>
+                  <li>Quel problème il résout</li>
+                  <li>Ce qui le rend unique</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors invisible"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 2: Identifier votre public cible -->
+          <div id="step-2-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-users text-green-500 mr-2"></i>Étape 2:
+              Identifier ton public cible
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                Maintenant, il faut savoir à qui ton produit va plaire. C'est
+                comme quand tu choisis qui inviter à ton anniversaire. Tu dois
+                connaître:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>Qui sont les personnes qui achèteraient ton produit?</li>
+                <li>
+                  Quel est leur âge, où habitent-ils, que font-ils dans la vie?
+                </li>
+                <li>Quels sont leurs besoins et leurs problèmes?</li>
+                <li>Combien d'argent peuvent-ils dépenser?</li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <ul class="mt-2 space-y-1 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Qui?</span> Les parents
+                    d'enfants de 3 à 8 ans
+                  </li>
+                  <li>
+                    <span class="font-semibold">Caractéristiques:</span> Parents
+                    âgés de 25 à 40 ans, habitant en ville, soucieux de la santé
+                    dentaire
+                  </li>
+                  <li>
+                    <span class="font-semibold">Besoins:</span> Faire que leurs
+                    enfants se brossent les dents correctement sans bataille
+                    quotidienne
+                  </li>
+                  <li>
+                    <span class="font-semibold">Budget:</span> Prêts à payer
+                    15-20€ pour une solution qui fonctionne
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Décris les personnes qui pourraient acheter ton produit:
+                </p>
+                <ul class="list-disc pl-6 text-gray-600">
+                  <li>Qui sont-ils? (âge, lieu, profession, intérêts)</li>
+                  <li>Quels problèmes essaient-ils de résoudre?</li>
+                  <li>Combien seraient-ils prêts à payer?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 3: Analyser la concurrence -->
+          <div id="step-3-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-binoculars text-purple-500 mr-2"></i>Étape 3:
+              Analyser la concurrence
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                C'est comme quand tu regardes ce que les autres enfants
+                apportent à l'école pour le goûter. Tu dois voir ce que font
+                déjà les autres entreprises qui vendent des produits similaires
+                au tien:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>Quels produits similaires existent déjà?</li>
+                <li>Combien coûtent-ils?</li>
+                <li>Qu'est-ce que les gens aiment et n'aiment pas chez eux?</li>
+                <li>Comment ton produit peut-il être meilleur?</li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Concurrents:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>
+                        Brosse à dents électrique pour enfants "DentiFun" - 25€
+                      </li>
+                      <li>
+                        Application de minuterie de brossage "BrossoBravo" -
+                        Gratuite
+                      </li>
+                      <li>Brosse à dents avec lumières "BrightSmile" - 18€</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Ce que les gens aiment:</span>
+                    Les couleurs vives, les personnages connus, la facilité
+                    d'utilisation
+                  </li>
+                  <li>
+                    <span class="font-semibold"
+                      >Ce que les gens n'aiment pas:</span
+                    >
+                    Les piles qui s'usent vite, les brosses trop grandes pour
+                    les petites bouches
+                  </li>
+                  <li>
+                    <span class="font-semibold">Notre avantage:</span> Notre
+                    brosse combine chants d'oiseaux et minuterie, utilise des
+                    piles rechargeables et a une taille adaptée aux enfants de
+                    3-8 ans
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Fais une liste de 3-5 produits concurrents au tien et note
+                  pour chacun:
+                </p>
+                <ul class="list-disc pl-6 text-gray-600">
+                  <li>Le nom et le prix</li>
+                  <li>Leurs points forts</li>
+                  <li>Leurs points faibles</li>
+                  <li>Comment ton produit se différencie</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 4: Évaluer la demande -->
+          <div id="step-4-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-search-dollar text-blue-500 mr-2"></i>Étape 4:
+              Évaluer la demande
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                Maintenant, il faut savoir si beaucoup de personnes veulent un
+                produit comme le tien. C'est comme quand tu vérifies si tes amis
+                aiment aussi ton jouet préféré:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>Combien de personnes cherchent ce type de produit?</li>
+                <li>
+                  Est-ce que c'est quelque chose que les gens achètent souvent?
+                </li>
+                <li>Est-ce que la demande augmente ou diminue?</li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Recherches Google:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>
+                        "Brosse à dents enfant" - 10,000 recherches par mois
+                      </li>
+                      <li>
+                        "Comment faire brosser les dents aux enfants" - 5,000
+                        recherches par mois
+                      </li>
+                      <li>
+                        "Brosse à dents sonore" - 2,000 recherches par mois
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Tendance:</span> Les recherches
+                    sur les brosses à dents pour enfants avec des
+                    fonctionnalités amusantes ont augmenté de 20% l'année
+                    dernière
+                  </li>
+                  <li>
+                    <span class="font-semibold">Saisonnalité:</span> Les ventes
+                    augmentent juste avant la rentrée scolaire et pendant les
+                    fêtes de fin d'année
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Utilise ces outils simples pour évaluer la demande:
+                </p>
+                <ul class="list-disc pl-6 text-gray-600">
+                  <li>
+                    Google Trends: pour voir si l'intérêt pour ton produit
+                    grandit
+                  </li>
+                  <li>
+                    Mots-clés Google: cherche des termes liés à ton produit pour
+                    voir combien de personnes les recherchent
+                  </li>
+                  <li>
+                    Forums et groupes: regarde si les gens parlent de problèmes
+                    que ton produit pourrait résoudre
+                  </li>
+                  <li>
+                    Consulte les avis sur les produits similaires pour voir ce
+                    que les gens recherchent
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 5: Analyser les coûts et la rentabilité -->
+          <div id="step-5-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-coins text-yellow-500 mr-2"></i>Étape 5: Analyser
+              les coûts et la rentabilité
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                C'est comme quand tu as une tirelire et que tu veux savoir si tu
+                auras assez d'argent pour acheter un jouet. Tu dois calculer:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>Combien ça coûte de fabriquer ou d'acheter ton produit</li>
+                <li>Combien tu peux le vendre</li>
+                <li>
+                  Combien tu gagnes par vente (la différence entre les deux)
+                </li>
+                <li>
+                  Combien ça coûte de faire connaître ton produit (publicité)
+                </li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Coûts de fabrication:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>Matériaux et composants: 5€ par brosse</li>
+                      <li>Emballage: 1€ par brosse</li>
+                      <li>Main d'œuvre: 2€ par brosse</li>
+                      <li>Coût total: 8€ par brosse</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Prix de vente:</span> 19,99€
+                  </li>
+                  <li>
+                    <span class="font-semibold">Profit par vente:</span> 11,99€
+                    (19,99€ - 8€)
+                  </li>
+                  <li>
+                    <span class="font-semibold">Coûts de marketing:</span> 2€
+                    par brosse vendue (publicités en ligne, échantillons)
+                  </li>
+                  <li>
+                    <span class="font-semibold">Profit net par brosse:</span>
+                    9,99€ (11,99€ - 2€)
+                  </li>
+                  <li>
+                    <span class="font-semibold">Seuil de rentabilité:</span>
+                    Besoin de vendre 200 brosses pour couvrir les coûts fixes
+                    initiaux de 2000€
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Fais un tableau simple avec ces informations:
+                </p>
+                <ul class="list-disc pl-6 text-gray-600">
+                  <li>
+                    Combien coûte la fabrication ou l'achat de ton produit
+                  </li>
+                  <li>
+                    À quel prix tu peux le vendre (regarde ce que font les
+                    concurrents)
+                  </li>
+                  <li>Combien tu gagnes par vente</li>
+                  <li>
+                    Quels sont les autres coûts (publicité, expédition, etc.)
+                  </li>
+                  <li>
+                    Combien de produits tu dois vendre pour commencer à gagner
+                    de l'argent
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 6: Tester le marché -->
+          <div id="step-6-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-flask text-pink-500 mr-2"></i>Étape 6: Tester le
+              marché
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                Avant de fabriquer beaucoup de produits, il est important de
+                tester si les gens vont vraiment l'acheter. C'est comme goûter
+                un nouveau plat avant d'en préparer pour toute la famille:
+              </p>
+
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>
+                  Crée une version simple de ton produit ou juste une
+                  description détaillée
+                </li>
+                <li>Montre-la à quelques personnes qui pourraient l'acheter</li>
+                <li>
+                  Demande-leur ce qu'ils en pensent et s'ils l'achèteraient
+                </li>
+                <li>
+                  Essaie de vendre quelques unités pour voir si ça marche
+                  vraiment
+                </li>
+              </ul>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple
+                  simple:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                  <li>
+                    <span class="font-semibold">Test initial:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>
+                        Création d'un prototype simple avec une brosse à dents
+                        et un petit module sonoreal
+                      </li>
+                      <li>Test avec 10 familles pendant deux semaines</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Retours:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>8 sur 10 familles ont aimé le produit</li>
+                      <li>Les enfants brossent leurs dents plus longtemps</li>
+                      <li>
+                        Suggestions: ajouter plus de chansons, améliorer
+                        l'étanchéité
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Première vente test:</span>
+                    <ul class="pl-4 mt-1">
+                      <li>Création d'une page web simple avec précommande</li>
+                      <li>
+                        50 précommandes reçues en une semaine avec un petit
+                        budget publicitaire
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="font-semibold">Conclusion:</span> Le test
+                    montre un intérêt réel pour le produit, avec des
+                    améliorations à apporter avant le lancement final
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Planifie comment tu pourrais tester ton produit:
+                </p>
+                <ul class="list-disc pl-6 text-gray-600">
+                  <li>
+                    Comment créer une version simple ou un prototype de ton
+                    produit
+                  </li>
+                  <li>
+                    Qui pourrais-tu contacter pour tester ton produit (amis,
+                    famille, clients potentiels)
+                  </li>
+                  <li>Quelles questions tu leur poserais</li>
+                  <li>
+                    Comment tu pourrais faire une petite vente test (site web,
+                    réseaux sociaux, petit stand)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="next-step bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Suivant<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 7: Conclusion - Produit gagnant ou pas? -->
+          <div id="step-7-content" class="step-content">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+              <i class="fas fa-trophy text-amber-500 mr-2"></i>Étape 7:
+              Conclusion - Produit gagnant ou pas?
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">
+                Maintenant, c'est l'heure de décider si ton produit a de bonnes
+                chances de réussir! Comme quand tu réfléchis pour choisir ton
+                équipe pour un jeu:
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                  <h3 class="font-bold text-green-700 mb-2">
+                    <i class="fas fa-check-circle text-green-500 mr-1"></i
+                    >Signes d'un produit gagnant:
+                  </h3>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>Il résout clairement un problème réel</li>
+                    <li>Beaucoup de gens cherchent ce type de produit</li>
+                    <li>
+                      Il est différent ou meilleur que les produits concurrents
+                    </li>
+                    <li>Tu peux le vendre avec un bon profit</li>
+                    <li>Les tests montrent que les gens l'aiment</li>
+                    <li>La demande est en augmentation</li>
+                    <li>Il correspond aux tendances actuelles</li>
+                  </ul>
+                </div>
+
+                <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                  <h3 class="font-bold text-red-700 mb-2">
+                    <i class="fas fa-times-circle text-red-500 mr-1"></i>Signes
+                    d'un produit à risque:
+                  </h3>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                    <li>
+                      Le problème qu'il résout n'est pas important pour les gens
+                    </li>
+                    <li>Peu de personnes recherchent ce type de produit</li>
+                    <li>Trop de concurrents déjà bien établis</li>
+                    <li>La marge bénéficiaire est trop faible</li>
+                    <li>Les tests ne montrent pas d'enthousiasme</li>
+                    <li>La demande diminue</li>
+                    <li>Le marché est saturé</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="example-card bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6"
+              >
+                <h3 class="font-bold text-blue-700 mb-2">
+                  <i class="fas fa-star text-yellow-400 mr-1"></i>Exemple de
+                  conclusion:
+                </h3>
+                <p class="text-gray-700">Pour notre brosse à dents sonore:</p>
+                <div class="mt-2 bg-white p-3 rounded border border-blue-100">
+                  <p class="text-gray-700">
+                    <span class="font-bold text-green-600"
+                      >✓ Produit gagnant!</span
+                    >
+                    Notre étude de marché montre que:
+                  </p>
+                  <ul class="list-disc pl-5 mt-2 text-gray-600">
+                    <li>
+                      Il résout un problème commun pour de nombreux parents
+                    </li>
+                    <li>
+                      Les recherches Google sur ce type de produit augmentent
+                    </li>
+                    <li>
+                      Notre produit a des avantages uniques par rapport à la
+                      concurrence
+                    </li>
+                    <li>La marge bénéficiaire de 50% est excellente</li>
+                    <li>
+                      8 familles sur 10 lors des tests ont été satisfaites
+                    </li>
+                    <li>
+                      Nous avons déjà 50 précommandes avec un marketing minimal
+                    </li>
+                  </ul>
+                  <p class="mt-3 text-gray-700">
+                    <span class="font-bold">Plan d'action:</span> Procéder au
+                    lancement avec les améliorations suggérées par les testeurs
+                    et un plan marketing ciblant les parents de jeunes enfants.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                <h3 class="font-bold text-yellow-700 mb-2">
+                  <i class="fas fa-pencil-alt mr-1"></i>À ton tour:
+                </h3>
+                <p class="text-gray-700 mb-3">
+                  Analyse toutes les informations que tu as recueillies et
+                  décide:
+                </p>
+                <ol class="list-decimal pl-6 text-gray-600 space-y-2">
+                  <li>Liste les points positifs de ton étude de marché</li>
+                  <li>Liste les points négatifs ou risques</li>
+                  <li>
+                    Décide si ton produit est "gagnant" ou s'il a besoin d'être
+                    modifié
+                  </li>
+                  <li>
+                    Si c'est un produit gagnant, note tes prochaines étapes
+                  </li>
+                  <li>
+                    Si ce n'est pas un produit gagnant, réfléchis à comment tu
+                    pourrais l'améliorer ou changer d'idée
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-8">
+              <button
+                class="prev-step bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Précédent
+              </button>
+              <button
+                class="restart-btn bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                <i class="fas fa-redo mr-2"></i>Recommencer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pied de page -->
+      <footer class="text-center mt-8 text-gray-500 text-sm">
+        <p>Guide d'Étude de Marché Simplifiée © 2025 - Tous droits réservés</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
